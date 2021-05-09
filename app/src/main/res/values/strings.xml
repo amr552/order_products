@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Products</string>
+    <string name="urun_miktar">Urun miktar seciniz</string>
+    <string name="urun_olustur">Urun Olusturma Sayfasi </string>
+    <string-array name="urun_tip">
+
+        <item>adet</item>
+        <item>paket</item>
+        <item>kutu</item>
+    </string-array>
+</resources>

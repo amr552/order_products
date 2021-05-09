@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".an_MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="21dp"
+        android:text="@string/urun_olustur"
+        android:textColor="#009688"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/an_etxt_Urunismi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/an_etxt_Urunismi"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="12dp"
+        android:ems="10"
+        android:hint="Urun Isminin Giriniz "
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/an_etxt_Urun_Fiyat"
+        app:layout_constraintEnd_toEndOf="@+id/an_btn_iv_fotocek"
+        app:layout_constraintStart_toStartOf="@+id/an_etxt_Urun_Fiyat"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/an_etxt_Urun_Fiyat"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="11dp"
+        android:ems="10"
+        android:hint="Urun Fiyatini Giriniz"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/an_etxt_Urun_Aciklama"
+        app:layout_constraintEnd_toEndOf="@+id/an_etxt_Urun_Aciklama"
+        app:layout_constraintStart_toStartOf="@+id/an_etxt_Urun_Aciklama"
+        app:layout_constraintTop_toBottomOf="@+id/an_etxt_Urunismi" />
+
+    <EditText
+        android:id="@+id/an_etxt_Urun_Aciklama"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="7dp"
+        android:ems="10"
+        android:hint="Aciklama Giriniz "
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/an_spinner"
+        app:layout_constraintEnd_toEndOf="@+id/an_spinner"
+        app:layout_constraintStart_toStartOf="@+id/an_spinner"
+        app:layout_constraintTop_toBottomOf="@+id/an_etxt_Urun_Fiyat" />
+
+    <Button
+        android:id="@+id/an_btn_Urun_Ekle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginBottom="88dp"
+        android:onClick="am_UrunOlustur"
+        android:text="Urun Olustur"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/an_btn_listview_goster"
+        app:layout_constraintTop_toBottomOf="@+id/an_btn_iv_fotocek" />
+
+    <Button
+        android:id="@+id/an_btn_listview_goster"
+        android:layout_width="0dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginRight="31dp"
+        android:onClick="am_UrunOlustur"
+        android:text="ListView Goster"
+        app:layout_constraintBaseline_toBaselineOf="@+id/an_btn_Urun_Ekle"
+        app:layout_constraintEnd_toStartOf="@+id/an_btn_Urun_Ekle"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/an_spinner"
+        android:layout_width="321dp"
+        android:layout_height="0dp"
+
+
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginBottom="45dp"
+        android:spinnerMode="dialog"
+        app:layout_constraintBottom_toTopOf="@+id/an_btn_iv_fotocek"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/an_etxt_Urun_Aciklama" />
+
+    <ImageView
+        android:id="@+id/an_iv_fotodan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="47dp"
+        android:layout_marginLeft="47dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="53dp"
+        android:layout_marginRight="53dp"
+        app:layout_constraintEnd_toStartOf="@+id/an_btn_iv_fotocek"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/an_spinner"
+        tools:src="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/an_btn_iv_fotocek"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginRight="64dp"
+        android:layout_marginBottom="73dp"
+        android:text="Foto Cekim"
+        app:layout_constraintBottom_toTopOf="@+id/an_btn_Urun_Ekle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/an_iv_fotodan"
+        app:layout_constraintTop_toBottomOf="@+id/an_spinner" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
